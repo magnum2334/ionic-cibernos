@@ -1,0 +1,7 @@
+{
+  "name": "inonic-cibernos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
