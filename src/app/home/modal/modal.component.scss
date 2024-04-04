@@ -1,0 +1,33 @@
+.dark-dialog-content {
+    max-width: 400px;
+    /* Establece el ancho máximo */
+    margin: auto;
+    /* Centra el modal horizontalmente */
+}
+.mat-dialog-container {
+    padding: 0;
+    /* Elimina el relleno del contenedor del diálogo */
+}
+.mat-card {
+    width: 100%;
+    /* Asegura que la tarjeta ocupe todo el espacio disponible */
+}
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+}
+.mat-form-field {
+    width: 100%;
+}
+mat-card-title,
+mat-card-content {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    color: black;
+}
+.button {
+    display: flex;
+    justify-content: flex-end;
+}

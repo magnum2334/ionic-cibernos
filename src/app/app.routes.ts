@@ -1,14 +1,23 @@
 import { Routes } from '@angular/router';
+import { authGuard } from 'src/guards/auth.guard';
+import { LoginComponent } from './login/login.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/inbox',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
-    path: 'folder/:id',
+    path: 'home',
+    canActivate: [authGuard],
     loadComponent: () =>
-      import('./folder/folder.page').then((m) => m.FolderPage),
+      import('./home/home.component').then((m) => m.HomeComponent),
   },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  { path: '**', component: NotFoundComponent },
 ];
